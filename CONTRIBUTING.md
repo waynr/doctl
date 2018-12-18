@@ -89,7 +89,7 @@ Update the version in:
 To release `doctl`, you need to install:
 
 * [xgo](https://github.com/karalabe/xgo)
-* [github-release](https://github.com/aktau/github-release)
+* [gothub](https://github.com/itchio/gothub)
 
 And make them available in your `PATH`. You can use `go get -u` for both of them and add your
 `$GOPATH/bin` to your `PATH` so your scripts will find them.
@@ -102,7 +102,7 @@ To build `doctl` for all its platforms, run `scripts/stage.sh major minor patch`
 (e.g. `scripts/stage.sh 1 5 0`). This will place all files and their checksums 
 in `builds/major.minor.patch/release`.
 
-Mark the release on GitHub with `scripts/release.sh v<version>` (e.g. `scripts/release.sh v1.5.0`, _note_ the `v`),
+Tag the release on GitHub with `scripts/release.sh v<version>` (e.g. `scripts/release.sh v1.5.0`, _note_ the `v`),
 then upload using `scripts/upload.sh <version>`.
 
 Finally, go to [releases](https://github.com/digitalocean/doctl/releases) and update the release
