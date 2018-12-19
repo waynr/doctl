@@ -9,6 +9,7 @@ confinement: strict
 apps:
   doctl:
     command: bin/doctl
+    completer: complexion.doctl_bash
     plugs: [network, home]
 
 build-packages:
@@ -21,9 +22,6 @@ parts:
     plugin: go
     go-importpath: github.com/digitalocean/doctl
     go-packages: [github.com/digitalocean/doctl/cmd/doctl]
-    override-build: |
-      snapcraftctl build
-      mkdir -p $SNAPCRAFT_PART_INSTALL/bash_completions
-      mkdir -p $SNAPCRAFT_PART_INSTALL/zsh_completions
-      doctl completion bash > $SNAPCRAFT_PART_INSTALL/bash_completions/doctl
-      doctl completion zsh > $SNAPCRAFT_PART_INSTALL/zsh_completions/doctl
+    override-prime: |
+      doctl completion bash > $SNAPCRAFT_PART_INSTALL/complexion.doctl_bash
+      doctl completion zsh > $SNAPCRAFT_PART_INSTALL/complexion.doctl_zsh
