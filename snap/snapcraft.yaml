@@ -2,6 +2,7 @@ name: doctl
 base: core18
 grade: stable
 version: git
+version-script: cat ./VERSION 
 summary: A command line interface for DigitalOcean services
 description: doctl is a command line interface to the DigitalOcean public API
 confinement: strict
