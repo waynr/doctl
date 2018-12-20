@@ -23,5 +23,6 @@ parts:
     go-importpath: github.com/digitalocean/doctl
     go-packages: [github.com/digitalocean/doctl/cmd/doctl]
     override-prime: |
+      snapcraftctl prime
       doctl completion bash > $SNAPCRAFT_PART_INSTALL/complexion.doctl_bash
       doctl completion zsh > $SNAPCRAFT_PART_INSTALL/complexion.doctl_zsh
