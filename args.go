@@ -48,7 +48,7 @@ const (
 	ArgNodePoolCount = "count"
 	// ArgNodePoolNodeIDs is a cluster's node pool nodes argument.
 	ArgNodePoolNodeIDs = "node-ids"
-	// ArgMaintenanceWindow is a clsuter's maintenance window argument
+	// ArgMaintenanceWindow is a cluster's maintenance window argument
 	ArgMaintenanceWindow = "maintenance-window"
 	// ArgCommandWait is a wait for a resource to be created argument.
 	ArgCommandWait = "wait"
